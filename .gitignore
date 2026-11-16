@@ -1,0 +1,30 @@
+﻿# Local secrets (sanitized examples are public)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Dependencies and generated files
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.next/
+.next-build/
+*.tsbuildinfo
+coverage/
+*.log
+
+# Database backups and personal profiles
+*.sql
+*.dump
+*.backup
+/backend-app/data/profiles.json
+
+# OS files
+.DS_Store
+Thumbs.db

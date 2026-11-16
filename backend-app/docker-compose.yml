@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: in_car_ai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      # Portul 5432 este deja folosit pe calculator; în container rămâne 5432.
+      - "5433:5432"
+    volumes:
+      - in_car_ai_postgres:/var/lib/postgresql/data
+
+volumes:
+  in_car_ai_postgres:
